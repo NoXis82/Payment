@@ -23,18 +23,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+        actionBtn();
     }
 
-    public void initViews() {
-        mInputMoney = findViewById(R.id.inputMoney);
-        mInputInfo = findViewById(R.id.inputInfo);
+    public void actionBtn() {
         Button mBtnPay = findViewById(R.id.btnPay);
-        mBankCardChkBx = findViewById(R.id.bankCardChkBx);
-        mMobilePhoneChkBx = findViewById(R.id.mobilePhoneChkBx);
-        mCashAddressChkBx = findViewById(R.id.cashAddressChkBx);
-        mBankCardChkBx.setOnCheckedChangeListener(checkedChangeListener);
-        mMobilePhoneChkBx.setOnCheckedChangeListener(checkedChangeListener);
-        mCashAddressChkBx.setOnCheckedChangeListener(checkedChangeListener);
         mBtnPay.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -60,6 +53,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void initViews() {
+        mInputMoney = findViewById(R.id.inputMoney);
+        mInputInfo = findViewById(R.id.inputInfo);
+        mBankCardChkBx = findViewById(R.id.bankCardChkBx);
+        mMobilePhoneChkBx = findViewById(R.id.mobilePhoneChkBx);
+        mCashAddressChkBx = findViewById(R.id.cashAddressChkBx);
+        mBankCardChkBx.setOnCheckedChangeListener(checkedChangeListener);
+        mMobilePhoneChkBx.setOnCheckedChangeListener(checkedChangeListener);
+        mCashAddressChkBx.setOnCheckedChangeListener(checkedChangeListener);
     }
 
     CompoundButton.OnCheckedChangeListener checkedChangeListener =
