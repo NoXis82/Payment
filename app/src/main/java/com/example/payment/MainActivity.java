@@ -37,19 +37,23 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,
                             "Заполните форму", Toast.LENGTH_LONG).show();
                 } else {
-                    StringBuilder outMessage = new StringBuilder();
-                    outMessage.append((getString(R.string.inputMoney) + ": "
-                            + mInputMoney.getText().toString())).append("\n")
-                            .append(getString(R.string.inputInfo) + ": "
-                                    + mInputInfo.getText().toString()).append("\n")
-                            .append(getString(R.string.bankCardChkBx) + ": "
-                                    + mBankCardChkBx.isChecked()).append("\n")
-                            .append(getString(R.string.mobilePhoneChkBx) + ": "
-                                    + mMobilePhoneChkBx.isChecked()).append("\n")
-                            .append(getString(R.string.cashAddressChkBx) + ": "
-                                    + mCashAddressChkBx.isChecked()).append("\n");
+                    String outMessage = (getString(R.string.inputMoney) + ": "
+                            + mInputMoney.getText().toString()) +
+                            "\n" +
+                            getString(R.string.inputInfo) + ": "
+                            + mInputInfo.getText().toString() +
+                            "\n" +
+                            getString(R.string.bankCardChkBx) + ": "
+                            + mBankCardChkBx.isChecked() +
+                            "\n" +
+                            getString(R.string.mobilePhoneChkBx) + ": "
+                            + mMobilePhoneChkBx.isChecked() +
+                            "\n" +
+                            getString(R.string.cashAddressChkBx) + ": "
+                            + mCashAddressChkBx.isChecked() +
+                            "\n";
                     Toast.makeText(MainActivity.this,
-                            outMessage.toString(), Toast.LENGTH_LONG).show();
+                            outMessage, Toast.LENGTH_LONG).show();
                 }
             }
         });
